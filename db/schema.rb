@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_14_070754) do
+ActiveRecord::Schema.define(version: 202110214970761) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,12 @@ ActiveRecord::Schema.define(version: 2021_02_14_070754) do
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "gutter_guard_remove"
     t.boolean "gutter_guard_rinse"
+    t.boolean "roof_services"
+    t.boolean "gutter_cleaning"
+    t.boolean "house_wash"
+    t.boolean "pool_enclosures"
+    t.boolean "driveway"
+    t.string "rust_removal"
   end
 
 end

@@ -22,6 +22,12 @@ Quote.create(
   pool_deck_type: "wood",
   gutter_guard_remove: true,
   gutter_guard_rinse: false,
+  roof_services: true,
+  gutter_cleaning: true,
+  house_wash: false,
+  pool_enclosures: true,
+  driveway: false,
+  rust_removal: true,
 );
 
 Quote.create(
@@ -40,4 +46,5 @@ Quote.create(
   pool_deck_type: "wood",
   gutter_guard_remove: true,
   gutter_guard_rinse: false,
+  rust_removal: true,
 );
