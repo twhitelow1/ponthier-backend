@@ -48,3 +48,10 @@ Quote.create(
   gutter_guard_rinse: false,
   rust_removal: true,
 );
+
+OfferedService.create(name: "House Wash")
+OfferedService.create(name: "Roof Cleaning")
+OfferedService.create(name: "Driveway/Flat Surface")
+OfferedService.create(name: "Gutter Cleaning")
+OfferedService.create(name: "Rust Removal")
+

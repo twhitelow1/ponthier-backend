@@ -1,0 +1,2 @@
+class OfferedService < ApplicationRecord
+end
