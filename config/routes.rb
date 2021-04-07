@@ -16,5 +16,7 @@ Rails.application.routes.draw do
     get "/services" => "offered_services#index"
     post "/services" => "offered_services#create"
     get "/services/:id" => "offered_services#show"
+    delete "services/:id" => "offered_services#destroy"
+    patch "/services/:id" => "offered_services#update"
   end
 end
