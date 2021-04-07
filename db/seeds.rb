@@ -29,6 +29,7 @@ Quote.create(
   roof_services: false,
   gutter_cleaning: true,
   building_wash: true,
+  flat_surfaces: true,
   rust_removal: false,
 );
 
