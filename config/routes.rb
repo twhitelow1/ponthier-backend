@@ -12,5 +12,9 @@ Rails.application.routes.draw do
     post "/quotes" => "quotes#create"
     get "/quotes/:id" => "quotes#show"
     patch "/quotes/:id" => "quotes#update" 
+
+    get "/services" => "offered_services#index"
+    post "/services" => "offered_services#create"
+    get "/services/:id" => "offered_services#show"
   end
 end

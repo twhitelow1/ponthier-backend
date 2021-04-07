@@ -1,19 +1,30 @@
 class CreateQuotes < ActiveRecord::Migration[6.1]
   def change
     create_table :quotes do |t|
+      t.string :status
+      t.float :price
       t.string :client_name
       t.string :email
       t.string :phone
       t.string :project_type
-      t.integer :floors
+      t.string :floors
       t.integer :building_sqft
+      t.boolean :garage
       t.string :roof_material
       t.string :pitch_of_roof
-      t.boolean :garage
-      t.string :ext_type
-      t.string :flt_surface_sqft
-      t.string :enclosure_height
-      t.string :pool_deck_type
+      t.string :gutter_sqft
+      t.string :ext_material
+      t.boolean :screen_removal
+      t.string :door_material
+      t.integer :flt_surface_sqft
+      t.string :driveway_size
+      t.string :comments
+      t.boolean :roof_services
+      t.boolean :gutter_cleaning
+      t.boolean :rust_removal
+      t.boolean :building_wash 
+      t.boolean :flat_surfaces
+      t.boolean :driveway
 
       t.timestamps
     end

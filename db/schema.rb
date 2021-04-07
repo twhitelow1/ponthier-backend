@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(version: 202110214970763) do
 
   create_table "offered_services", force: :cascade do |t|
     t.string "name"
+    t.string "description"
+    t.string "img_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -29,29 +31,32 @@ ActiveRecord::Schema.define(version: 202110214970763) do
   end
 
   create_table "quotes", force: :cascade do |t|
+    t.string "status"
+    t.float "price"
     t.string "client_name"
     t.string "email"
     t.string "phone"
     t.string "project_type"
-    t.integer "floors"
+    t.string "floors"
     t.integer "building_sqft"
+    t.boolean "garage"
     t.string "roof_material"
     t.string "pitch_of_roof"
-    t.boolean "garage"
-    t.string "ext_type"
-    t.string "flt_surface_sqft"
-    t.string "enclosure_height"
-    t.string "pool_deck_type"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.boolean "gutter_guard_remove"
-    t.boolean "gutter_guard_rinse"
+    t.string "gutter_sqft"
+    t.string "ext_material"
+    t.boolean "screen_removal"
+    t.string "door_material"
+    t.integer "flt_surface_sqft"
+    t.string "driveway_size"
+    t.string "comments"
     t.boolean "roof_services"
     t.boolean "gutter_cleaning"
-    t.boolean "house_wash"
-    t.boolean "pool_enclosures"
+    t.boolean "rust_removal"
+    t.boolean "building_wash"
+    t.boolean "flat_surfaces"
     t.boolean "driveway"
-    t.string "rust_removal"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
