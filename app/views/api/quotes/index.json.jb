@@ -1,6 +1,8 @@
 @quotes.map do |quote|
   {
     id: quote.id,
+    price: quote.price,
+    status: quote.status,
     customer_info: {
       client_name: quote.client_name, 
       email: quote.email, 
