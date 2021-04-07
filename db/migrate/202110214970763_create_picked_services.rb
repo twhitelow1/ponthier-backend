@@ -1,8 +1,8 @@
 class CreatePickedServices < ActiveRecord::Migration[6.1]
   def change
     create_table :picked_services do |t|
-      t.integer :offered_service_id
-      t.integer :quote_id
+      t.belongs_to :offered_service
+      t.belongs_to :quote
 
       t.timestamps
     end

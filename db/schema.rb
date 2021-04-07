@@ -24,10 +24,12 @@ ActiveRecord::Schema.define(version: 202110214970763) do
   end
 
   create_table "picked_services", force: :cascade do |t|
-    t.integer "offered_service_id"
-    t.integer "quote_id"
+    t.bigint "offered_service_id"
+    t.bigint "quote_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["offered_service_id"], name: "index_picked_services_on_offered_service_id"
+    t.index ["quote_id"], name: "index_picked_services_on_quote_id"
   end
 
   create_table "quotes", force: :cascade do |t|
