@@ -33,8 +33,8 @@ ActiveRecord::Schema.define(version: 202110214970763) do
   end
 
   create_table "quotes", force: :cascade do |t|
-    t.string "status"
-    t.float "price"
+    t.string "status", default: "submitted"
+    t.decimal "price", precision: 9, scale: 2, default: "0.0"
     t.string "client_name"
     t.string "email"
     t.string "phone"
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 202110214970763) do
     t.string "door_material"
     t.integer "flt_surface_sqft"
     t.string "driveway_size"
-    t.string "comments"
+    t.text "comments"
     t.boolean "roof_services"
     t.boolean "gutter_cleaning"
     t.boolean "rust_removal"

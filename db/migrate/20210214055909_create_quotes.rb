@@ -1,8 +1,8 @@
 class CreateQuotes < ActiveRecord::Migration[6.1]
   def change
     create_table :quotes do |t|
-      t.string :status
-      t.float :price
+      t.string :status, default: "submitted"
+      t.decimal :price, precision: 9, scale: 2, default: 0.00
       t.string :client_name
       t.string :email
       t.string :phone
@@ -18,7 +18,7 @@ class CreateQuotes < ActiveRecord::Migration[6.1]
       t.string :door_material
       t.integer :flt_surface_sqft
       t.string :driveway_size
-      t.string :comments
+      t.text :comments
       t.boolean :roof_services
       t.boolean :gutter_cleaning
       t.boolean :rust_removal
